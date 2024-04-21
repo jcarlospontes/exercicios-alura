@@ -4,21 +4,36 @@ import trilhajava.formacaojavapoo.classes.*;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Desafio 1\n");
         Estudos classestudos = new Estudos();
         Perfil classeperfil = new Perfil();
         Soma classesoma = new Soma();
         Subtracao classesubtracao = new Subtracao();
-        ConversorTemperatura classeconversortemperatura = new ConversorTemperatura();
+        ClasseDesafioDois classedesafiodois = new ClasseDesafioDois();
 
+        System.out.println("\n##Desafio 1");
         classestudos.imprimeAnotacoesEstudos();
         classeperfil.imprimeCumprimentoPersonalizado("João");
         classesoma.impromeSomaDezCinco();
         classesubtracao.impromeSubtracaoDezCinco();
 
-        System.out.println("Desafio 2\n");
-        classeconversortemperatura.celciuisParaFahrenheint(12.2);
-
+        System.out.println("\n##Desafio 2");
+        classedesafiodois.celciuisParaFahrenheint(12.2);
+        classedesafiodois.imprimeMediaDoisDecimais(10,5);
+        double variaveldouble = 21.99;
+        int variavelint = (int) variaveldouble;
+        System.out.println("Casting de double para int: "+variavelint);
+        char letra = 'l';
+        String palavra = "Variave";
+        System.out.println("Mensagem concatenada de string e char: "+palavra+letra);
+        double precoProduto = 12.90;
+        int quantidade = 4;
+        System.out.println("O preco total do produto custando "+precoProduto+" pela quantidade "+quantidade+" é: " + classedesafiodois.retornaPrecoPorQuantidade(precoProduto,quantidade));
+        double valorEmDolares = 5.5;
+        System.out.println("O valor convertido de "+valorEmDolares+" em reais é: "+classedesafiodois.retornaDolarParaReal(valorEmDolares));
+        double precoOriginal = 49.99;
+        double percentualDesconto = 5;
+        double precoFinal = precoOriginal - classedesafiodois.retornaDesconto(precoOriginal,percentualDesconto);
+        System.out.println("O valor do desconto de "+percentualDesconto+" para o preco de "+precoOriginal+" é de "+String.format("%.2f", classedesafiodois.retornaDesconto(precoOriginal,percentualDesconto))+" resultando em :"+String.format("%.2f",precoFinal));
 
     }
 }
