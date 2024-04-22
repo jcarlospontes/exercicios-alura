@@ -1,9 +1,6 @@
-package trilhajava.formacaojavapoo;
+package trilhajava.formacaojavapoo.cursoum;
 
-import trilhajava.formacaojavapoo.classes.*;
-
-import java.util.Random;
-import java.util.Scanner;
+import trilhajava.formacaojavapoo.cursoum.classes.*;
 
 public class Main {
     public static void main(String[] args) {

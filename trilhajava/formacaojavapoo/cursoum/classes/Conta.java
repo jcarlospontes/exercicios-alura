@@ -1,4 +1,4 @@
-package trilhajava.formacaojavapoo.classes;
+package trilhajava.formacaojavapoo.cursoum.classes;
 
 import java.util.Scanner;
 
