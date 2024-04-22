@@ -14,6 +14,7 @@ public class Main {
         Subtracao classesubtracao = new Subtracao();
         ClasseDesafioDois classedesafiodois = new ClasseDesafioDois();
         ClasseDesafioTres classedesafiotres = new ClasseDesafioTres();
+        Conta conta = new Conta();
 
         System.out.println("\n##Desafio 1");
         classestudos.imprimeAnotacoesEstudos();
@@ -48,6 +49,9 @@ public class Main {
         classedesafiotres.tabuadaNumero();
         classedesafiotres.parOuImpar();
         classedesafiotres.fatorialNumero();
+
+        System.out.println("\n##Desafio 4");
+        conta.inicializaConta();
 
     }
 }
