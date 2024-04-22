@@ -1,6 +1,10 @@
 package trilhajava.formacaojavapoo;
 
 import trilhajava.formacaojavapoo.classes.*;
+
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -34,6 +38,30 @@ public class Main {
         double percentualDesconto = 5;
         double precoFinal = precoOriginal - classedesafiodois.retornaDesconto(precoOriginal,percentualDesconto);
         System.out.println("O valor do desconto de "+percentualDesconto+" para o preco de "+precoOriginal+" é de "+String.format("%.2f", classedesafiodois.retornaDesconto(precoOriginal,percentualDesconto))+" resultando em :"+String.format("%.2f",precoFinal));
+
+        System.out.println("\n##Desafio 3");
+        Scanner scan = new Scanner(System.in);
+        int numeroaleatorio = new Random().nextInt(100);
+        int chances = 5;
+        while (chances > 0){
+            System.out.print("Digite o número para tentar acertar (tentativas: "+chances+"): ");
+            int tentativa = scan.nextInt();
+            if(tentativa == numeroaleatorio){
+                System.out.println("Numero correto!");
+                break;
+            }
+            else if(tentativa > numeroaleatorio && chances > 1){
+                System.out.println("O número é menor!");
+            }
+            else if(tentativa < numeroaleatorio && chances > 1){
+                System.out.println("O número é maior!");
+            }
+            else{
+                System.out.println("Sem tentativas!");
+                System.out.println("O numero era "+numeroaleatorio);
+            }
+            chances -= 1;
+        }
 
     }
 }
