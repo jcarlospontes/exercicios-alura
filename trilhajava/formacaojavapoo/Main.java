@@ -13,6 +13,7 @@ public class Main {
         Soma classesoma = new Soma();
         Subtracao classesubtracao = new Subtracao();
         ClasseDesafioDois classedesafiodois = new ClasseDesafioDois();
+        ClasseDesafioTres classedesafiotres = new ClasseDesafioTres();
 
         System.out.println("\n##Desafio 1");
         classestudos.imprimeAnotacoesEstudos();
@@ -40,28 +41,13 @@ public class Main {
         System.out.println("O valor do desconto de "+percentualDesconto+" para o preco de "+precoOriginal+" é de "+String.format("%.2f", classedesafiodois.retornaDesconto(precoOriginal,percentualDesconto))+" resultando em :"+String.format("%.2f",precoFinal));
 
         System.out.println("\n##Desafio 3");
-        Scanner scan = new Scanner(System.in);
-        int numeroaleatorio = new Random().nextInt(100);
-        int chances = 5;
-        while (chances > 0){
-            System.out.print("Digite o número para tentar acertar (tentativas: "+chances+"): ");
-            int tentativa = scan.nextInt();
-            if(tentativa == numeroaleatorio){
-                System.out.println("Numero correto!");
-                break;
-            }
-            else if(tentativa > numeroaleatorio && chances > 1){
-                System.out.println("O número é menor!");
-            }
-            else if(tentativa < numeroaleatorio && chances > 1){
-                System.out.println("O número é maior!");
-            }
-            else{
-                System.out.println("Sem tentativas!");
-                System.out.println("O numero era "+numeroaleatorio);
-            }
-            chances -= 1;
-        }
+        classedesafiotres.numeroAleatorio();
+        classedesafiotres.numeroPositivoNegativo();
+        classedesafiotres.comparaDoisNumeros();
+        classedesafiotres.calculaArea();
+        classedesafiotres.tabuadaNumero();
+        classedesafiotres.parOuImpar();
+        classedesafiotres.fatorialNumero();
 
     }
 }
