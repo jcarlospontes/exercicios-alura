@@ -1,28 +1,15 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Filme {
+public class Filme extends Titulo {
 
-    public String nome;
-    public int anoDeLancamento;
-    public int duracaoEmMinutos;
-    public boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
+    private String diretor;
 
-    public void exibeFichaTecnica() {
-        System.out.println("Nome do filme: " +nome);
-        System.out.println("Ano de lançamento: " +anoDeLancamento);
-        System.out.println("Duração em minutos: " +duracaoEmMinutos);
-        System.out.println("Incluído no plano: " +incluidoNoPlano);
+    public String getDiretor() {
+        return this.diretor;
     }
 
-    public void avalia(double nota) {
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
-    }
-
-    public double pegaMedia() {
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
     }
 
 }

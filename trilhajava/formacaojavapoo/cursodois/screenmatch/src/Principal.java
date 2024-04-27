@@ -1,35 +1,36 @@
-import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.*;
 
 public class Principal {
 
+
     public static void main(String[] args) {
         Filme favorito = new Filme();
-        Pessoa pessoa = new Pessoa();
-        Calculadora calculadora = new Calculadora();
-        Musica musica = new Musica("Musica 1","Artista 1",1992,128,32);
-        Carro carro = new Carro();
-        Aluno aluno = new Aluno();
+        favorito.setNome("The Matrix");
+        favorito.setAnoDeLancamento(1999);
+        favorito.setDuracaoEmMinutos(135);
+        favorito.setIncluidoNoPlano(true);
 
-        favorito.nome = "The Matrix";
-        favorito.anoDeLancamento = 1999;
-        favorito.duracaoEmMinutos = 135;
-        favorito.incluidoNoPlano = true;
+        Filme outro = new Filme();
+        outro.setNome("John Wick");
+        outro.setAnoDeLancamento(2014);
+        outro.setDuracaoEmMinutos(101);
+        outro.setIncluidoNoPlano(true);
 
-        favorito.exibeFichaTecnica();
-        favorito.avalia(9);
-        favorito.avalia(8);
-        favorito.avalia(9);
+        Serie serie = new Serie();
+        serie.setNome("La Casa de Papel");
+        serie.setAnoDeLancamento(2017);
+        serie.setIncluidoNoPlano(true);
+        serie.setAtiva(true);
+        serie.setTemporadas(5);
+        serie.setEpisodiosPorTemporada(10);
+        serie.setMinutosPorEpisodio(45);
 
-        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(favorito);
+        calculadora.inclui(outro);
+        calculadora.inclui(serie);
 
-        pessoa.olaMundo();
-        System.out.println("O dobro de 42 é: "+calculadora.calculaDobro(42));
-        musica.exibeFicha();
-
-
-
-
-
+        System.out.println("Tempo total: " +calculadora.getTempoTotal());
     }
 
 }
