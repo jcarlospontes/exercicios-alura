@@ -5,8 +5,10 @@ import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Principal {
     public static void main(String[] args) {
@@ -48,5 +50,15 @@ public class Principal {
         System.out.println("Tamanho da lista: " +listaDeFilmes.size());
         System.out.println("Primeiro Filme: " +listaDeFilmes.get(0));
         System.out.println(listaDeFilmes);
+
+
+        ArrayList<Titulo> lista = new ArrayList<>();
+        lista.add(favorito);
+        lista.add(outro);
+        lista.add(serie);
+
+        Collections.sort(lista);
+        System.out.println(lista);
+
     }
 }
